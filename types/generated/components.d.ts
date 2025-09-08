@@ -6,7 +6,25 @@ export interface SharedFeature extends Struct.ComponentSchema {
     displayName: 'feature';
   };
   attributes: {
-    rooms: Schema.Attribute.String & Schema.Attribute.Required;
+    airConditioning: Schema.Attribute.String;
+    alarm: Schema.Attribute.String;
+    balcony: Schema.Attribute.String;
+    bathrooms: Schema.Attribute.String;
+    bedrooms: Schema.Attribute.String;
+    elevator: Schema.Attribute.String;
+    fireplace: Schema.Attribute.String;
+    furnished: Schema.Attribute.String;
+    garage: Schema.Attribute.String;
+    garden: Schema.Attribute.String;
+    heating: Schema.Attribute.String;
+    internet: Schema.Attribute.String;
+    laundry: Schema.Attribute.String;
+    parking: Schema.Attribute.String;
+    pool: Schema.Attribute.String;
+    rooms: Schema.Attribute.String;
+    storage: Schema.Attribute.String;
+    surface: Schema.Attribute.String;
+    terrace: Schema.Attribute.String;
   };
 }
 
@@ -17,7 +35,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'file-video';
   };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    file: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
   };
 }
 

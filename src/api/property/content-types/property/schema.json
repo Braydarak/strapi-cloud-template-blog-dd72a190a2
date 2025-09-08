@@ -40,7 +40,7 @@
           "localized": true
         }
       },
-      "required": true
+      "required": false
     },
     "access": {
       "type": "string",
@@ -49,7 +49,7 @@
           "localized": true
         }
       },
-      "required": true
+      "required": false
     },
     "image": {
       "type": "media",
@@ -58,7 +58,7 @@
           "localized": true
         }
       },
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "allowedTypes": [
         "images",
