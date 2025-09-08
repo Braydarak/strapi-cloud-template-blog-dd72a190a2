@@ -58,7 +58,7 @@
           "localized": true
         }
       },
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
@@ -79,6 +79,14 @@
       },
       "component": "shared.feature",
       "repeatable": true
+    },
+    "maps": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
