@@ -405,7 +405,13 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    features: Schema.Attribute.Component<'shared.feature', true> &
+    features: Schema.Attribute.Component<'shared.feature', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    gallery: Schema.Attribute.Media<'images' | 'files', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

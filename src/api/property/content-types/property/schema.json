@@ -78,7 +78,7 @@
         }
       },
       "component": "shared.feature",
-      "repeatable": true
+      "repeatable": false
     },
     "maps": {
       "type": "string",
@@ -87,6 +87,19 @@
           "localized": true
         }
       }
+    },
+    "gallery": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }
