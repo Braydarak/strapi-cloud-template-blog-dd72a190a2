@@ -108,6 +108,51 @@
       },
       "component": "shared.feature",
       "repeatable": false
+    },
+    "situation": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "enum": [
+        "Compra",
+        "Alquiler"
+      ]
+    },
+    "propertyType": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "enum": [
+        "Apartamentos",
+        "Áticos",
+        "Áticos Dúplex",
+        "Dúplex",
+        "Estudios",
+        "Pisos",
+        "Triplex",
+        "Chalets Independientes",
+        "Locales Comerciales",
+        "Oficinas",
+        "Garajes",
+        "Habitaciones"
+      ]
+    },
+    "reference": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true,
+      "unique": true
     }
   }
 }

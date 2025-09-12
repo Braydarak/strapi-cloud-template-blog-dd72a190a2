@@ -441,7 +441,43 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    propertyType: Schema.Attribute.Enumeration<
+      [
+        'Apartamentos',
+        '\u00C1ticos',
+        '\u00C1ticos D\u00FAplex',
+        'D\u00FAplex',
+        'Estudios',
+        'Pisos',
+        'Triplex',
+        'Chalets Independientes',
+        'Locales Comerciales',
+        'Oficinas',
+        'Garajes',
+        'Habitaciones',
+      ]
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
+    reference: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    situation: Schema.Attribute.Enumeration<['Compra', 'Alquiler']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
