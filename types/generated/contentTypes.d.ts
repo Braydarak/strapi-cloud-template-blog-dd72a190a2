@@ -463,14 +463,21 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    reference: Schema.Attribute.Integer &
+    reference: Schema.Attribute.BigInteger &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
-      }>;
+      }> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: '9999';
+          min: '0000';
+        },
+        string
+      >;
     situation: Schema.Attribute.Enumeration<['Compra', 'Alquiler']> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

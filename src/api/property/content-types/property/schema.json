@@ -94,21 +94,6 @@
         }
       }
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
-      "required": true
-    },
-    "features": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.feature",
-      "repeatable": false
-    },
     "situation": {
       "type": "enumeration",
       "pluginOptions": {
@@ -145,14 +130,31 @@
       ]
     },
     "reference": {
-      "type": "integer",
+      "type": "biginteger",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
       "required": true,
-      "unique": true
+      "unique": true,
+      "min": "0000",
+      "max": "9999"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "features": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.feature",
+      "repeatable": false
     }
   }
 }
