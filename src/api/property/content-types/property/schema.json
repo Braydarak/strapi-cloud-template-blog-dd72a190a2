@@ -78,14 +78,6 @@
         "files"
       ]
     },
-    "maps": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "price": {
       "type": "string",
       "pluginOptions": {
@@ -140,6 +132,24 @@
       "unique": true,
       "min": "0000",
       "max": "9999"
+    },
+    "municipality": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
+    },
+    "postcode": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     },
     "slug": {
       "type": "uid",

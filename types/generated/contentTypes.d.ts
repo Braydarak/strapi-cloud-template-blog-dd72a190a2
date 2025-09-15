@@ -429,7 +429,14 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::property.property'
     >;
-    maps: Schema.Attribute.String &
+    municipality: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    postcode: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
