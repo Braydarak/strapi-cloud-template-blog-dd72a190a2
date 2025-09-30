@@ -392,7 +392,7 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
     access: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Schema.Attribute.DateTime;
@@ -440,20 +440,20 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
     municipality: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     postcode: Schema.Attribute.BigInteger &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     price: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     propertyType: Schema.Attribute.Enumeration<
@@ -480,7 +480,6 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     reference: Schema.Attribute.BigInteger &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -497,7 +496,7 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
