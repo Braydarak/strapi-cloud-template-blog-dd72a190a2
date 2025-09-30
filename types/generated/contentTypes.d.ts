@@ -405,6 +405,14 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    destacado: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     features: Schema.Attribute.Component<'shared.feature', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
