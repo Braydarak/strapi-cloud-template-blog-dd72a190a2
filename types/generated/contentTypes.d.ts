@@ -428,7 +428,7 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
     hidden: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<false>;
