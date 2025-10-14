@@ -15,6 +15,15 @@
     }
   },
   "attributes": {
+    "hidden": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": false
+    },
     "title": {
       "type": "string",
       "pluginOptions": {
